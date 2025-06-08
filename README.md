@@ -1,58 +1,106 @@
-# Criando meu primeiro Copiloto na Microsoft Studio
+# 🤖 Microsoft Copilot Studio – Guia Prático
 
-## 👩🏽‍💻🤓O que é o Copilot Studio??🤓👩🏽‍💻
-O Microsoft Copilot Studio é uma plataforma de inteligência artificial conversacional desenvolvida para facilitar a criação de agentes inteligentes, também conhecidos como copilotos. Esses agentes são capazes de automatizar tarefas, responder a perguntas e executar processos de negócios de forma autônoma. A plataforma é voltada tanto para desenvolvedores quanto para usuários com pouca ou nenhuma experiência em programação, graças à sua interface low-code, ou seja, de baixo código.
+Este repositório contém anotações e boas práticas para trabalhar com **Microsoft Copilot Studio**, incluindo criação e customização de copilots, fluxos de conversa, fallback e uso de IA generativa (GenAI).
 
-O Copilot Studio permite a criação de agentes personalizados por meio de uma interface gráfica intuitiva ou utilizando linguagem natural. Esses agentes podem ser integrados facilmente a canais como Microsoft Teams, SharePoint, WhatsApp e outros, além de poderem ser incorporados ao ecossistema do Microsoft 365 Copilot.
+---
 
-Um dos conceitos centrais da plataforma é o uso de agentes inteligentes. Esses agentes combinam modelos de linguagem com instruções específicas, acesso a fontes de conhecimento, ações automatizadas e gatilhos, sendo capazes de operar de forma autônoma. Isso significa que eles não apenas respondem a perguntas, mas também executam ações com base no contexto, aprendem com interações anteriores e se adaptam a diferentes situações.
+## 📌 Sumário
 
-Entre suas funcionalidades principais, o Copilot Studio permite a criação de diálogos sofisticados, com fluxos de conversa que respondem de forma precisa e eficiente às necessidades dos usuários. Ele também se integra a diversas fontes de dados, permitindo respostas mais completas e contextualizadas. Além disso, a plataforma possibilita a automação de processos repetitivos, aumentando a eficiência operacional, e oferece ferramentas analíticas para acompanhar o desempenho dos agentes criados.
+* [Criar um Copilot em branco](#criar-um-copilot-em-branco)
+* [Customizar um Tópico](#customizar-um-tópico)
+* [Personalizar Mensagem de Erro (Fallback)](#personalizar-mensagem-de-erro-fallback)
+* [Ajustar a Qualidade da Resposta com GenAI](#ajustar-a-qualidade-da-resposta-com-genai)
 
-Várias empresas já utilizam o Copilot Studio em suas operações. Organizações como McKinsey, Clifford Chance e Pets at Home empregam a plataforma para melhorar o atendimento ao cliente, fornecer suporte interno aos funcionários e gerenciar tarefas administrativas, como agendamentos e fluxos de trabalho.
+---
 
-O Copilot Studio está disponível em diferentes modelos de licenciamento, com opções mensais ou por uso, e sua disponibilidade pode variar de acordo com a região. Para quem deseja começar a explorar a ferramenta, a Microsoft oferece uma documentação oficial completa com tutoriais, exemplos e vídeos explicativos, tornando o processo de criação acessível até mesmo para iniciantes.
+## 🧱 Criar um Copilot em branco
 
-### 🛫Criando um Copilot baseado em modelo (modelo de Viagens ou “Safe Travels”)🛫
-Para criar um Copilot baseado em modelo no Microsoft Copilot Studio, como o modelo de Viagens ou “Safe Travels”, o primeiro passo é acessar a plataforma. Basta entrar no site https://copilotstudio.microsoft.com e fazer login com uma conta Microsoft, preferencialmente uma conta corporativa ou educacional com acesso ao Microsoft 365.
+### ✅ O que é:
 
-Uma vez dentro do ambiente do Copilot Studio, você deve clicar na opção “Criar copilot”, disponível na tela inicial. Em seguida, será oferecida a possibilidade de começar do zero ou utilizar um modelo pronto. Para esse caso, selecione a opção “Começar com um modelo”.
+Criação de um chatbot do zero, totalmente personalizável.
 
-Na galeria de modelos disponíveis, procure pelo modelo chamado “Safe Travels” ou, em português, “Viagens”. Esse modelo é voltado para fornecer informações sobre segurança e planejamento de viagens, respondendo a perguntas como “É seguro viajar para [país]?”, “Quais são as restrições para entrar em [destino]?” ou “Preciso de visto para [país]?”. Ao localizar o modelo desejado, clique sobre ele para visualizar a descrição e, em seguida, selecione a opção “Usar este modelo” ou “Criar”.
+### ▶️ Passo a passo:
 
-Depois disso, você será redirecionado para a interface de criação do Copilot. Nesse ambiente, poderá personalizar o nome do seu agente, ajustar os fluxos de conversa, adicionar ou editar tópicos, e configurar fontes de dados, se desejar que o Copilot responda com base em informações específicas da sua organização ou base de conhecimento.
+1. Acesse o [Copilot Studio](https://copilotstudio.microsoft.com/).
+2. Vá em **Copilots > Criar > Copilot em branco**.
+3. Dê um nome ao seu projeto.
+4. Clique em **Criar** para abrir o ambiente de edição.
 
-Com as edições concluídas, você pode testar o funcionamento do Copilot diretamente na interface do estúdio. Se tudo estiver funcionando como esperado, basta publicar o agente para torná-lo acessível ao público ou à equipe interna, dependendo da sua configuração.
+---
 
-Esse processo permite que você aproveite um modelo já estruturado, ganhando tempo no desenvolvimento e garantindo uma base sólida para personalizações futuras.
+## ✨ Customizar um Tópico
 
-### 🧠Criando um Copilot baseado em descrição com IA🧠
-Para criar um Copilot baseado em descrição com inteligência artificial no Microsoft Copilot Studio, o processo é simples e intuitivo. Essa funcionalidade permite que você descreva, em linguagem natural, o que deseja que o agente faça, e a própria IA da Microsoft se encarrega de gerar a estrutura inicial do Copilot com base nessa descrição.
+### ✅ O que é:
 
-O primeiro passo é acessar o site do Copilot Studio em https://copilotstudio.microsoft.com e fazer login com uma conta Microsoft, preferencialmente vinculada ao Microsoft 365. Na página inicial da plataforma, clique em “Criar copilot”.
+Tópicos definem como o chatbot responde a intenções específicas do usuário.
 
-Em vez de escolher um modelo pronto, selecione a opção “Descrever com IA” ou “Criar com base em descrição”. Nesse momento, será exibido um campo onde você deve digitar uma descrição clara e objetiva do que você deseja que o Copilot faça. Por exemplo, você pode escrever algo como: “Quero um assistente virtual que ajude funcionários a encontrarem informações sobre férias, licenças e benefícios trabalhistas”, ou “Quero um Copilot que oriente clientes sobre políticas de troca e devolução de produtos”.
+### ▶️ Passo a passo:
 
-A inteligência artificial processará sua descrição e criará automaticamente a estrutura inicial do Copilot. Isso inclui a criação de tópicos, fluxos de conversação, perguntas e possíveis respostas, baseando-se nos objetivos descritos. Em poucos segundos, você terá um protótipo funcional que poderá personalizar.
+1. Vá em **Tópicos > Novo tópico**.
+2. Defina:
 
-Após a criação automática, você será levado para o ambiente de edição, onde pode revisar, ajustar ou expandir os conteúdos gerados. Pode também adicionar tópicos manuais, integrar dados externos, configurar fontes de conhecimento ou criar fluxos com base em regras e condições.
+   * Nome do tópico.
+   * Palavras-chave de gatilho (ex: "ajuda", "pedir suporte").
+3. Use o **editor visual** para:
 
-Uma vez satisfeito com as configurações, você pode testar o funcionamento do Copilot diretamente na plataforma e, se tudo estiver em ordem, publicá-lo para ser utilizado dentro da organização ou em canais externos, como Microsoft Teams, páginas web ou aplicativos de chat.
+   * Adicionar perguntas, mensagens e condições.
+   * Criar ramificações com base em respostas do usuário.
+   * Definir ou reutilizar variáveis.
+   * Adicionar respostas generativas.
 
-Essa funcionalidade baseada em descrição com IA é ideal para quem quer começar rapidamente, sem precisar construir tudo do zero, aproveitando a capacidade da inteligência artificial para estruturar um agente inteligente com base nas necessidades específicas do usuário.
+---
 
-### 📖Criar um Copilot em branco📖
-Criar um Copilot em branco no Microsoft Copilot Studio é a melhor opção para quem deseja construir um agente conversacional totalmente personalizado, desde a estrutura até os fluxos de conversa. Esse modo oferece liberdade total de criação, ideal para projetos específicos que não se encaixam em modelos prontos ou descrições automáticas.
+## ❗ Personalizar Mensagem de Erro (Fallback)
 
-O processo começa acessando o site https://copilotstudio.microsoft.com, onde você deve fazer login com uma conta Microsoft, de preferência vinculada ao Microsoft 365. Na tela inicial, clique em “Criar copilot”. Entre as opções apresentadas, selecione “Criar em branco”, ou “Blank Copilot”.
+### ✅ O que é:
 
-A seguir, será solicitado que você forneça um nome para o seu Copilot e, se desejar, uma breve descrição do propósito dele. Depois disso, a plataforma abrirá o ambiente de desenvolvimento, onde você poderá começar a estruturar seu agente do zero.
+Respostas exibidas quando o chatbot não entende a entrada do usuário.
 
-Nesse ambiente, você pode criar tópicos personalizados, que são os blocos principais da conversa. Cada tópico representa um conjunto de perguntas e respostas relacionadas a um determinado tema. Você pode definir gatilhos (palavras-chave ou frases que ativam o tópico) e construir fluxos de conversa usando blocos interativos, como mensagens, perguntas ao usuário, condições, chamadas de API, entre outros.
+### ▶️ Passo a passo:
 
-Além disso, é possível integrar o Copilot a bases de conhecimento, como documentos, páginas da web ou bancos de dados, por meio da funcionalidade de conectores ou fontes de dados. Isso permite que o agente busque informações atualizadas e responda de forma mais contextualizada.
+1. Vá em **Tópicos**.
+2. Edite o tópico chamado **Fallback**.
+3. Personalize a mensagem, por exemplo:
 
-Outro ponto importante é a possibilidade de testar o comportamento do Copilot dentro do próprio estúdio, ajustando os fluxos à medida que o projeto evolui. Quando o desenvolvimento estiver concluído, você poderá publicar o Copilot e disponibilizá-lo em diferentes canais, como Microsoft Teams, sites da empresa, aplicativos ou outros ambientes de chat.
+   ```text
+   Desculpe, não entendi. Você pode reformular ou escolher uma opção abaixo.
+   ```
+4. Adicione ações úteis:
 
-Criar um Copilot em branco é ideal para quem deseja controle total sobre a lógica de atendimento, design da conversa e integração com sistemas internos, sendo uma ótima escolha para desenvolvedores, analistas de processos e profissionais de negócios que tenham demandas específicas e estruturadas.
+   * Redirecionar para tópicos gerais.
+   * Oferecer opção de falar com um atendente humano.
 
+---
+
+## 🤖 Ajustar a Qualidade da Resposta com GenAI
+
+### ✅ O que é:
+
+Respostas geradas por inteligência artificial com base em prompts e contexto do usuário.
+
+### ▶️ Passo a passo:
+
+1. Dentro de um tópico, clique em **+ > Resposta com IA (generativa)**.
+2. Escreva um prompt claro, como:
+
+   ```text
+   Explique como funciona o processo de reembolso de forma simples.
+   ```
+3. (Opcional) Use variáveis no prompt:
+
+   ```text
+   Informe a política de reembolso para o produto {{nomeProduto}}.
+   ```
+4. (Opcional) Ative **Knowledge Sources** para respostas com base em dados específicos.
+
+### 🎯 Dicas para ajustar a qualidade:
+
+* Para respostas mais **precisas**:
+
+  * Use prompts detalhados.
+  * Inclua restrições como “responda como especialista técnico”.
+* Para respostas mais **genéricas**:
+
+  * Use prompts amplos e curtos.
+
+---
