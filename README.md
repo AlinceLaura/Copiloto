@@ -52,9 +52,9 @@ Este repositório contém as anotações, insights e práticas realizadas durant
 
 ## 📂 Estrutura do Repositório
 
-  ├── README.md 
-  ├── speech_notes.md 
-  ├── language_notes.md
+  - README.md
+  - [Notas detalhadas do Language Studio](./docs/language_notes.md)
+  - [Notas detalhadas do Speech Studio](./docs/speech_notes.md)
   
 ---
 
